@@ -1,0 +1,66 @@
+.header
+  padding: 6px 0 6px
+  background-color: $main-color
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1200px
+    margin: 0 auto
+  &-search
+    max-width: 336px
+    width: 100%
+    &__input
+      width: 100%
+      padding: 5px 30px 5px 12px
+      font-size: 14px
+      line-height: 22px
+      border: 1px solid $secondary-color
+      border-radius: 4px
+      background-color: #fff
+      background-image: url(../img/header/search-icon.svg)
+      background-repeat: no-repeat 
+      background-position: right 12px center
+.nav
+  display: flex
+  align-items: center
+  &-user
+    display: flex
+    align-items: center
+    &__avatar
+      margin-right: 8px
+    &__name
+      font-size: 15px
+      letter-spacing: 1px
+      color: #fff
+      font-weight: 600
+  &-panel
+    margin: 0 12px
+    &__link
+      padding: 0 12px
+      color: #fff
+      text-decoration: none
+      border-left: 1px solid $nav-divider-color
+      border-right: 1px solid $nav-divider-color
+      &:last-child
+        border-left: none
+  &-icons
+    display: flex
+    align-items: center
+    &__link
+      display: flex
+      align-items: center
+      margin-left: 17px
+      text-decoration: none
+      &:last-child:before
+        content: ""
+        display: inline-block
+        margin-right: 12px
+        width: 1px
+        height: 16px
+        background: $nav-divider-color
+    &__svg
+      fill: $nav-icon-color
+      &:hover
+        transition: 0.3s
+        fill: #fff

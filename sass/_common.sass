@@ -1,0 +1,28 @@
+*
+  box-sizing: border-box
+  +font-reg
+  font-size: 14px
+  line-height: 22px
+
+body
+  background-color: $desktop-bg-color
+
+input:focus
+  outline: none
+
+.container
+  display: flex
+  max-width: 1200px
+  margin: 16px auto 0
+
+.seemore
+  display: flex
+  align-items: center
+  margin-top: -12px
+  text-decoration: none
+  &__dropdown
+    margin-right: 12px
+  &__text
+    color: $link-color
+    &:hover
+      text-decoration: underline
