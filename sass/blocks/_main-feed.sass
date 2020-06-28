@@ -3,11 +3,13 @@
   width: 100%
   margin-left: 18px
   margin-right: 24px
+
 .create-post
   min-height: 192px
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15)
   border-radius: 4px
   background-color: #fff
+  overflow: hidden
   &-header
     height: 40px
     background-color: $desktop-bg-color
@@ -16,6 +18,48 @@
       margin: 0
       padding: 9px 16px
       color: $main-text-color
+  &-body
+    margin: 16px
+    display: flex
+    align-items: flex-start
+    padding-bottom: 24px
+    max-width: 556px
+    width: 100%
+    border-bottom: 1px solid $secondary-color
+  &__avatar
+    margin-right: 16px
   &-input
-    width: 400px
-    height: 50px
+    max-width: 500px
+    width: 100%
+    font-size: 16px
+    color: $create-post-text-color
+    &:focus
+      outline: none
+  &-footer
+    display: flex
+    justify-content: start
+    margin: 16px
+  &-tag
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: no-wrap
+    margin-right: 8px
+    padding-left: 9px
+    height: 40px
+    background-color: $desktop-bg-color
+    border: none
+    border-radius: 48px
+    transition: 0.4s
+    &:hover
+      background-color: darken($desktop-bg-color, 5%)
+      cursor: pointer
+    &__addBtn
+      width: 134px
+    &__moreBtn
+      width: 48px
+    &__text
+      margin-left: 8px
+      color: $main-text-color
+
+    
