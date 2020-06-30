@@ -3,7 +3,9 @@
   width: 100%
 .stories
   min-height: 384px
+  margin-bottom: 16px
   padding-left: 24px
+  padding-right: 16px
   background-color: #fff
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15)
   border-radius: 4px
@@ -44,4 +46,103 @@
       color: $main-color
     &__subinfo
       color: $stories-subinfo-color
+.notif
+  height: 56px
+  margin-bottom: 16px
+  padding: 16px
+  display: flex
+  align-items: center
+  background-color: #fff
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  &-icon
+    margin-right: 8px
+  &-user-link
+    color: $main-color
+    font-weight: bold
 
+.stats
+  max-width: 384px
+  width: 100%
+  min-height: 296px
+  background-color: #fff
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15)
+  border-radius: 4px
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 9px 16px 12px
+    border-bottom: 1px solid $secondary-color
+    &__title
+      margin: 0
+      color: $main-text-color
+  &-body
+    margin: 0 16px
+    padding: 16px 0
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    border-bottom: 1px solid $secondary-color
+    &__title
+      margin: 0
+      margin-bottom: 4px
+      color: $main-color
+    &__subinfo
+      display: block
+      color: $stats-body-info
+    &-info
+      &__icons
+        margin-right: 4px
+        position: relative
+        top: 3px
+    &__counter
+      display: inline-block
+      width: 17px
+      height: 22px
+      text-align: center
+      vertical-align: middle
+      background-color: $desktop-bg-color
+      border: 1px solid $secondary-color
+      border-radius: 4px
+  &-avatar
+    margin-right: 12px
+    width: 48px
+    height: 48px
+    &__img
+      width: 100%
+      border-radius: 50%
+  &-footer
+    padding: 16px
+    &-tags
+      margin-bottom: 16px
+      max-width: 352px
+      height: 40px
+      color: $main-text-color
+      display: flex
+      &__item
+        width: 118px
+        text-align: center
+        padding: 8px 16px
+        font-size: 16px
+        border: 1px solid $secondary-color
+        cursor: pointer
+        &:last-child
+          border-top-right-radius: 4px
+          border-bottom-right-radius: 4px
+        &:first-child
+          border-top-left-radius: 4px
+          border-bottom-left-radius: 4px
+        &:hover
+          color: $active-tag
+          border-color: $active-tag
+    &-num
+      margin-bottom: 4px
+      text-align: center
+      font-size: 24px
+      color: $main-dark-text-color
+      &__desc
+        text-align: center
+        color: $stories-subinfo-color
+
+  

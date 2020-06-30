@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const appearShareModal = event => {
     const shareBtnTarget = event.target.closest('.post-footer-item__share');
     if (shareBtnTarget) {
-      shareModal.classList.remove('disFadeUpShareModal')
+      shareModal.classList.remove('disFadeUpShareModal');
       shareModal.classList.add('fadeUpShareModal');
     }
   };
