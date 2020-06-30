@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const createPostInput = document.querySelector(".create-post-input"),
-        postLike = document.querySelector("#post-like"),
-        likeCount = document.querySelector("#like-count"),
-        shareBtn = document.querySelector(".post-footer-item__share"),
-        shareModal = document.querySelector(".share-modal"),
-        mainContainer = document.querySelector(".container");
+        postLikeList = document.querySelectorAll(".post-like"),
+        likeCountList = document.querySelectorAll(".like-count"),
+        postList = document.querySelectorAll(".post"),
+        shareBtnsList = document.querySelectorAll(".post-footer-item__share"),
+        shareModalList = document.querySelectorAll(".share-modal");
+  
+  const shareBtnsArray = Array.prototype.slice.call(shareBtnsList),
+        likeCountArray = Array.prototype.slice.call(likeCountList),
+        postLikeArray = Array.prototype.slice.call(postLikeList),
+        postArray = Array.prototype.slice.call(postList),
+        shareModalArray = Array.prototype.slice.call(shareModalList);
 
-  const handlerKeyEsc = (event) => {
-    if (event.keyCode === 27) {
-      shareModal.classList.remove('fadeUpShareModal');
-      shareModal.classList.add('disFadeUpShareModal');
-    }
-  };
-
-  const handlerCreatePost = (event) => {
+  const handlerCreatePost = event => {
     const target = event.target;
     if ((!target.classList.contains("create-post-input") && (createPostInput.textContent === '')) || 
       (event.keyCode === 27 && (createPostInput.textContent === ''))) {
@@ -21,24 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       createPostInput.style.color = "#8C8C8C";
     }
     if (event.keyCode === 27) createPostInput.blur();
-  }
-
-
-  const appearShareModal = event => {
-    const shareBtnTarget = event.target.closest('.post-footer-item__share');
-    if (shareBtnTarget) {
-      shareModal.classList.remove('disFadeUpShareModal');
-      shareModal.classList.add('fadeUpShareModal');
-    }
-  };
-
-  const dissappearShareModal = event => {
-    const shareBtnTarget = event.target.closest('.post-footer-item__share'),
-          shareModalTarget = event.target.closest('.share-modal');
-    if (!shareBtnTarget && !shareModalTarget) {
-      shareModal.classList.remove('fadeUpShareModal');
-      shareModal.classList.add('disFadeUpShareModal');
-    }
   };
 
   createPostInput.addEventListener("click", (event) => {
@@ -48,16 +29,44 @@ document.addEventListener("DOMContentLoaded", () => {
     createPostInput.style.color = "#595959";
   });
 
-  postLike.addEventListener("click", () => {
-    let like = likeCount.textContent; 
-    likeCount.textContent = ++like;
+  postLikeArray.forEach((elem, i) => {
+    let index = i;
+    elem.addEventListener("click", () => {
+      let like = likeCountArray[index].textContent; 
+      likeCountArray[index].textContent = ++like;
+    });
+  });
+
+  shareBtnsArray.forEach((elem, i) => {
+    let index = i;
+    elem.addEventListener("mouseover", event => {
+      const shareBtnTarget = event.target.closest('.post-footer-item__share');
+      if (shareBtnTarget) {
+        shareModalArray[index].classList.remove('disFadeUpShareModal');
+        shareModalArray[index].classList.add('fadeUpShareModal');
+      }
+    });
+  });
+
+  postArray.forEach((elem, i) => {
+    let index = i;
+    elem.addEventListener("mouseout", (event) => {
+      const shareBtnTarget = event.target.closest('.post-footer-item__share'),
+            shareModalTarget = event.target.closest('.share-modal');
+      if (!shareBtnTarget && !shareModalTarget) {
+        shareModalArray[index].classList.remove('fadeUpShareModal');
+        shareModalArray[index].classList.add('disFadeUpShareModal');
+      }
+    });
+
+    document.addEventListener("keyup", event => {
+      if (event.keyCode === 27) {
+        shareModalArray[index].classList.remove('fadeUpShareModal');
+        shareModalArray[index].classList.add('disFadeUpShareModal');
+      }
+    });
   });
 
   document.addEventListener("click", handlerCreatePost);
   document.addEventListener("keyup", handlerCreatePost);
-
-  shareBtn.addEventListener("mouseover", appearShareModal);
-  mainContainer.addEventListener("mouseout", dissappearShareModal);
-  document.addEventListener("keyup", handlerKeyEsc);
-
 });
