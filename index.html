@@ -15,7 +15,7 @@
       </div>
       <div class="nav">
         <div class="nav-user">
-          <img class="nav-user__avatar" src="img/user-avatar.svg" alt="avatar" >
+          <img class="nav-user__avatar" src="img/user-avatar.jpg" alt="avatar" >
           <span class="nav-user__name">Daniel</span>
         </div>
         <nav class="nav-panel">
@@ -54,7 +54,7 @@
     <div class="menu-sidebar">
       <a href="#">
         <div class="menu-sidebar-user">
-          <img class="menu-sidebar-user__avatar" src="img/user-avatar.svg" alt="avatar" >
+          <img class="menu-sidebar-user__avatar" src="img/user-avatar.jpg" alt="avatar" >
           <span class="menu-sidebar-user__name">Daniel Laktionov</span>
         </div>
       </a>
@@ -224,7 +224,7 @@
         </div>
         <!-- /.create-post-header -->
         <div class="create-post-body">
-          <a href="#"><img class="avatar create-post__avatar" src="img/user-avatar.svg" alt="avatar"></a>
+          <a href="#"><img class="avatar create-post__avatar" src="img/user-avatar.jpg" alt="avatar"></a>
           <div class="create-post-input" contenteditable="true">What’s on your mind, Daniel?</div>
         </div>
         <!-- /.create-post-body -->
@@ -265,7 +265,9 @@
         <div class="post-header">
           <div class="post-user">
             <div class="post-user-avatar">
-              <a href="#"><img class="post-user-avatar__img" src="img/user-avatar.svg" alt="Avatar"></a>
+              <a href="#">
+                <img class="post-user-avatar__img" src="img/user-avatar48x48.jpg" alt="Avatar">
+              </a>
             </div>
             <div class="post-user-info">
               <a href="#"><h4 class="post-user-info__username link">Daniel Laktionov</h4></a>
@@ -305,12 +307,21 @@
             </svg> 
             <span class="post-footer-item__text">Comments</span>
           </div>
-          <div class="post-footer-item">
-            <!-- <span class="post-footer-item__counter">56</span> -->
+          <div class="post-footer-item post-footer-item__share">
             <svg class="post-footer-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.625 15.5625C16.957 15.5625 16.3406 15.7969 15.8578 16.1883L11.0016 12.675C11.0829 12.2287 11.0829 11.7713 11.0016 11.325L15.8578 7.81172C16.3406 8.20312 16.957 8.4375 17.625 8.4375C19.1766 8.4375 20.4375 7.17656 20.4375 5.625C20.4375 4.07344 19.1766 2.8125 17.625 2.8125C16.0734 2.8125 14.8125 4.07344 14.8125 5.625C14.8125 5.89687 14.85 6.15703 14.9227 6.40547L10.3102 9.74531C9.62578 8.83828 8.53828 8.25 7.3125 8.25C5.24062 8.25 3.5625 9.92812 3.5625 12C3.5625 14.0719 5.24062 15.75 7.3125 15.75C8.53828 15.75 9.62578 15.1617 10.3102 14.2547L14.9227 17.5945C14.85 17.843 14.8125 18.1055 14.8125 18.375C14.8125 19.9266 16.0734 21.1875 17.625 21.1875C19.1766 21.1875 20.4375 19.9266 20.4375 18.375C20.4375 16.8234 19.1766 15.5625 17.625 15.5625ZM17.625 4.40625C18.2977 4.40625 18.8438 4.95234 18.8438 5.625C18.8438 6.29766 18.2977 6.84375 17.625 6.84375C16.9523 6.84375 16.4062 6.29766 16.4062 5.625C16.4062 4.95234 16.9523 4.40625 17.625 4.40625ZM7.3125 14.0625C6.17578 14.0625 5.25 13.1367 5.25 12C5.25 10.8633 6.17578 9.9375 7.3125 9.9375C8.44922 9.9375 9.375 10.8633 9.375 12C9.375 13.1367 8.44922 14.0625 7.3125 14.0625ZM17.625 19.5938C16.9523 19.5938 16.4062 19.0477 16.4062 18.375C16.4062 17.7023 16.9523 17.1562 17.625 17.1562C18.2977 17.1562 18.8438 17.7023 18.8438 18.375C18.8438 19.0477 18.2977 19.5938 17.625 19.5938Z" fill="#595959"/>
             </svg>
             <span class="post-footer-item__text">Share</span>
+            <div class="share-modal">
+              <ul class="share-modal-list">
+                <li class="share-modal-list__item"><a href="#">Share Now (Only me)</a></li>
+                <li class="share-modal-list__item"><a href="#">Share...</a></li>
+                <li class="share-modal-list__item"><a href="#">Send as Message</a></li>
+                <li class="share-modal-list__item"><a href="#">Share in a group</a></li>
+                <li class="share-modal-list__item"><a href="#">Share on a Friend's Timeline</a></li>
+                <li class="share-modal-list__item"><a href="#">Share to Page</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- /.post-footer -->
@@ -318,6 +329,91 @@
       <!-- /.post -->
     </div>
     <!-- /.main-feed -->
+
+    <div class="right-sidebar">
+      <div class="stories">
+        <div class="stories-header">
+          <h4 class="stories-header__title">Stories</h4>
+          <div class="stories-header-tags">
+            <a href="#">
+              <span class="stories-header-tags__item link">
+                <svg class="stories-header-tags__clock" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1C4.13438 1 1 4.13438 1 8C1 11.8656 4.13438 15 8 15C11.8656 15 15 11.8656 15 8C15 4.13438 11.8656 1 8 1ZM8 13.8125C4.79063 13.8125 2.1875 11.2094 2.1875 8C2.1875 4.79063 4.79063 2.1875 8 2.1875C11.2094 2.1875 13.8125 4.79063 13.8125 8C13.8125 11.2094 11.2094 13.8125 8 13.8125Z" fill="#0050B3"/>
+                  <path d="M10.7297 9.97811L8.50156 8.36718V4.5C8.50156 4.43125 8.44531 4.375 8.37656 4.375H7.625C7.55625 4.375 7.5 4.43125 7.5 4.5V8.80311C7.5 8.84374 7.51875 8.88124 7.55156 8.90467L10.1359 10.789C10.1922 10.8297 10.2703 10.8172 10.3109 10.7625L10.7578 10.1531C10.7984 10.0953 10.7859 10.0172 10.7297 9.97811Z" fill="#0050B3"/>
+                </svg>                
+                Arhive
+              </span>
+            </a>
+            <span class="stories-header-tags__pointDivider">•</span>
+            <a href="#">
+              <span class="stories-header-tags__item link">Settings</span>
+            </a>
+          </div>
+        </div>
+        <!-- /.stories-header -->
+        <div class="stories-content">
+          <div class="story">
+            <div class="story-preview">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23.5" fill="#F5F5F5" stroke="#D9D9D9"/>
+                <path d="M25.5938 26.4688V30.8047H23.3965V26.4688H19.3438V24.3008H23.3965V20.0332H25.5938V24.3008H29.6562V26.4688H25.5938Z" fill="#1890FF"/>
+              </svg>
+            </div>
+            <div class="story-info">
+              <h5 class="story-info__title">Add to your story</h5>
+              <span class="story-info__subinfo">Share a photo or video or write something</span>
+            </div>
+          </div>
+
+          <div class="story">
+            <div class="story-preview">
+              <img class="story-preview__img" src="img/stories/preview-story_concuria3006201728.jpg" alt="Story preview">
+            </div>
+            <div class="story-info">
+              <a href="#">
+                <h5 class="story-info__title link">Concuria</h5>
+              </a>
+              <span class="story-info__subinfo">4 hours ago</span>
+            </div>
+          </div>
+
+          <div class="story">
+            <div class="story-preview">
+              <img class="story-preview__img" src="img/stories/preview-story_figma3006201728.jpg" alt="Story preview">
+            </div>
+            <div class="story-info">
+              <a href="#">
+                <h5 class="story-info__title link">Figma</h5>
+              </a>
+              <span class="story-info__subinfo">5 hours ago</span>
+            </div>
+          </div>
+
+          <div class="story">
+            <div class="story-preview">
+              <img class="story-preview__img" src="img/stories/preview-story_ant-design3006201728.jpg" alt="Story preview">
+            </div>
+            <div class="story-info">
+              <a href="#">
+                <h5 class="story-info__title link">Ant Design</h5>
+              </a>
+              <span class="story-info__subinfo">6 hours ago</span>
+            </div>
+          </div>
+
+          <a href="#" class="seemore">
+            <svg class="seemore__dropdown" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.1308 4.6875H2.8683C2.56049 4.6875 2.38862 5.0125 2.57924 5.23437L7.71049 11.1844C7.85736 11.3547 8.14018 11.3547 8.28861 11.1844L13.4199 5.23437C13.6105 5.0125 13.4386 4.6875 13.1308 4.6875Z" fill="#BFBFBF"/>
+            </svg>
+            <span class="seemore__text link">See more...</span>
+          </a>
+          <!-- /.seemore -->
+        </div>
+        <!-- /.stories-content -->
+      </div>
+      <!-- /.stories -->
+    </div>
+    <!-- /.right-sidebar -->
   </div>
   <!-- /.conatainer -->
   <script src="script/script.js"></script>
